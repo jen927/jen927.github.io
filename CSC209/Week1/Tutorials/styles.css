@@ -1,0 +1,12 @@
+body {
+    margin: 15px;
+    background-color: rgb(109, 135, 172);
+}
+
+del {
+    text-decoration-color: rgb(204, 205, 212);
+}
+
+a {
+    text-decoration: none;
+}
