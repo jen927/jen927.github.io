@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Technical</title>
+        <link rel="stylesheet" href="techStyle.css">
+        <script>
+            function show() {
+                document.getElementById("assignments").style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Senior Year</h1>
+            <div>
+                <img src="../Images/gradCap.png" style="width:30%">
+            </div>
+        </header>
+        <section>
+            <h2>Overview</h2>
+            <p>Practicing HTML and CSS by making a list of classes I'm currently taking and a list of assignments to be done.</p>
+            <h2>Class/Courses</h2>
+            <div class="flex">
+                <div>
+                    <h3>Fall Semester</h3>
+                    <table>
+                        <tr>
+                            <th>Course</th>
+                            <th>Day(s)</th>
+                            <th>Start Time</th>
+                        </tr>
+                        <tr>
+                            <td>CSC209</td>
+                            <td>Tues/Thurs</td>
+                            <td>10:50am</td>
+                        </tr>
+                        <tr>
+                            <td>MTH238</td>
+                            <td>Mon/Wed/Fri</td>
+                            <td>9:25am</td>
+                        </tr>
+                        <tr>
+                            <td>MTH354</td>
+                            <td>Tues/Thurs</td>
+                            <td>9:25am</td>
+                        </tr>
+                        <tr>
+                            <td>SPN230</td>
+                            <td>Tues/Thurs</td>
+                            <td>2:45pm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3>Spring Semester</h3>
+                    <p>TBD</p>
+                </div>
+            </div>
+            <h2 id="clicker" onclick="show()">Click to Show assignments</h2>
+            <div id="assignments">
+                <h2>Assignments due this week by priority</h2>
+                <ol>
+                    <li>MTH238 Ch.1 and Ch.2</li>
+                    <li>MTH238 entry ticket</li>
+                    <li><del>Setting up Github Pages</del></li>
+                    <li><del>Doing HTML and CSS tutorials</del></li>
+                    <li><del>Watch "El Despertar de las hormigas" and take notes</del></li>
+                </ol>
+            </div>
+        </section>
+        <footer>
+            <p><a href='https://pngtree.com/freepng/graduation-cap-flat-multi-color_3777178.html'>png image from pngtree.com</a></p>
+        </footer>
+    </body>
+</html>
