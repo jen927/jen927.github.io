@@ -1,0 +1,57 @@
+.hw, #scheduleInfo {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.content {
+    padding: 10px;
+    background-color: white;
+    width: 100%;
+}
+
+.navBar {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: rgb(145, 166, 255);
+    }
+    li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    /* Change the link and background color on hover */
+    li a:hover {
+        background-color: #555555;
+        color: white;
+    }
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 81, 84);
+}
+
+footer {
+    background-color: rgb(255, 136, 220);
+    padding: 10px;
+}
+
+body {
+    background-color: rgb(250, 255, 127);
+}
+
+table {
+    td, th {
+        padding: 3px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+}

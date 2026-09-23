@@ -1,0 +1,16 @@
+header {
+    background-color: rgb(164, 153, 179);
+    text-align: center;
+}
+section {
+    background-color: rgb(83, 75, 98);
+    color: white;
+    padding: 10px;
+    a {
+        color: white;
+    }
+}
+
+body {
+    background-color: rgb(208, 188, 213);
+}

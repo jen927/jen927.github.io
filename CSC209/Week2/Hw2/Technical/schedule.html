@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Schedule</title>
+        <link id='theme' rel="stylesheet" href="../CSS/tech.css">
+        <script src="../JS/technical.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Intro to Advanced Python Programming</h1>
+                <div>
+                    <img src="../Images/computer.png" style="width:20%">
+                </div>
+            </div>
+        </header>
+        <div class="flex">
+            <div class="navBar">
+                <ul>
+                    <li><a href="technical.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="instructor.html">Instructor Info</a></li>
+                </ul>
+                <div>
+                    <h3>Style change</h3>
+                    <button type="button" onclick="changeCSS(2)">default</button>
+                    <button type="button" onclick="changeCSS(1)">dark</button>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Schedule</h2>
+                <div>
+                     <button type="button" onclick="show('scheduleInfo')">Click for More Info</button>
+                     <p id="scheduleInfo">It's a 16-week online course. We meet every Saturday from 7pm to 8pm EST. Each week, there is assigned homework. Some will include a Python file.</p>
+                </div>
+                <table>
+                    <tr>
+                        <th>Week</th>
+                        <th>Date</th>
+                        <th>Slides</th>
+                        <th>Topic</th>
+                        <th>HW</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>10/10/26</td>
+                        <td><a href="Lectures/lecture1.html">Lecture 1</a></td>
+                        <td>What programming is; how Python runs; variables; the print() function; using input() for interaction.</td>
+                        <td>Hw 1 <button type="button" onclick="show('hw1')">read more.</button> <p class="hw" id="hw1">Write a 5-line program that asks for the user's name and favorite hobby, then prints a custom message.</p></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>10/17/26</td>
+                        <td><a href="Lectures/lecture2.html">Lecture 2</a></td>
+                        <td>Recap Week 1. Mini-lecture on data types with examples. Live demo: a simple tip/total calculator. Lab time building a unit converter (e.g., miles to km).</td>
+                        <td>Hw 2 <button type="button" onclick="show('hw2')">read more</button> <p class="hw" id="hw2">Build a "grade average" calculator that takes three test scores and prints the average.</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <footer>
+            <a href='https://pngtree.com/freepng/personal-computer-icon-for-your-project_4813078.html'>Header png image from pngtree.com/</a>
+        </footer>
+    </body>
+</html>
