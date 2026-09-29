@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>JS Syntax</title>
+        <script src="../JS/Tutorials/syntax.js"></script>
+    </head>
+    <body>
+        <h1>JS Syntax</h1>
+        
+        <h2>JS  Keywords</h2>
+        <p>JS keywords are used to create variables. There are two keywords used:</p>
+        <ul>
+            <li><i>let</i></li>
+            <li><i>const</i></li>
+        </ul>
+        <p>Keywords are <b>case-senstive</b>. Therefore, <i>LET</i> will NOT be interperated as <i>let</i>. You can define a variable using <i>let</i> and later assign it a value. However, this not true for <i>const</i>.</p>
+
+        <p>You use <i>const</i> if the variable's value will <b>not</b> change. It's good programming practice to define/declare all variables at the beginning of the script. </p>
+
+        <p><i>let</i> and <i>const</i> provide <b>block scope</b> in JS. Meaning, if a variable is declared inside a { block }, then the variable cannot be accessed outside the block. All variables provide funciton scope as well.</p>
+        
+        <h2>JS Expressions</h2>
+        <p>An expression is a combination of values, variables, and operators, which computes to a value.</p>
+
+
+        
+        <h2>Example</h3>
+        <p>I've defined variable <i>x</i>, but I did not assign a value yet. Therefore, the console log will say <i>x</i> is undefined. So, let's assign different values using a JS function. First, we'll assign <i>x</i> = 3:</i></p>
+        <p id="ex1" onclick="assignX('ex1', 3)">Click here to show the value of <i>x</i>: </p>
+
+        <p>Now, I'll define <i>x</i> as 5.</p>
+        <p id="ex2" onclick="assignX('ex2', 5)">Click here to show new value of <i>x</i>: </p>
+
+        <p>However, if I were to call the console log OUTSIDE the function, it will continue to output undefined for <i>x</i>.</p>
+        <p></p>
+    </body>
+</html>

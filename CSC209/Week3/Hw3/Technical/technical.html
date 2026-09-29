@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Technical Home</title>
+        <link id='theme' rel="stylesheet" href="../CSS/technical.css">
+        <script src="../JS/technical.js"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Intro to Advanced Python Programming</h1>
+                <div>
+                    <img src="../Images/computer.png" style="width:20%">
+                </div>
+            </div>
+        </header>
+        <div id = 'choice3' class="flex">
+            <div class="navBar">
+                <ul>
+                    <li><a href="technical.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="instructor.html">Instructor Info</a></li>
+                </ul>
+                <div>
+                    <h3>Style change</h3>
+                    <button type="button" onclick="changeCSS(2)">default</button>
+                    <button type="button" onclick="changeCSS(1)">dark</button>
+
+                    <h3>Nav change</h3>
+                    <button type="button" onclick="changeNav('choice4', 'choice3')">Nav left</button>
+                    <button type="button" onclick="changeNav('choice3', 'choice4')">Nav right</button>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <button type="button" onclick="getTodayDate('date')">Today's date: </button>
+                    <h3 id="date"></h3>
+                </div>
+                <h2>Overview</h2>
+                <p>TechElevate is a 501(c)(3) organization that engages children and seniors across the country by providing them with free tech education.</p>
+                <p>Their Python classes help students build strong coding foundations, practice real problem-solving, and gain confidence through hands-on learning.</p>
+                <p>Students learn:</p>
+                <ul>
+                    <li>Variables</li>
+                    <li>Functions</li>
+                    <li>Conditonal Statements</li>
+                    <li>Lists</li>
+                    <li>Loops</li>
+                </ul>
+            </div>
+        </div>
+        <div id='choice4' class="flex">
+            <div class="content">
+                <div>
+                    <button type="button" onclick="getTodayDate('date')">Today's date: </button>
+                    <h3 id="date"></h3>
+                </div>
+                <h2>Overview</h2>
+                <p>TechElevate is a 501(c)(3) organization that engages children and seniors across the country by providing them with free tech education.</p>
+                <p>Their Python classes help students build strong coding foundations, practice real problem-solving, and gain confidence through hands-on learning.</p>
+                <p>Students learn:</p>
+                <ul>
+                    <li>Variables</li>
+                    <li>Functions</li>
+                    <li>Conditonal Statements</li>
+                    <li>Lists</li>
+                    <li>Loops</li>
+                </ul>
+            </div>
+             <div class="navBar">
+                <ul>
+                    <li><a href="technical.html">Home</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="instructor.html">Instructor Info</a></li>
+                </ul>
+                <div>
+                    <h3>Style change</h3>
+                    <button type="button" onclick="changeCSS(2)">default</button>
+                    <button type="button" onclick="changeCSS(1)">dark</button>
+
+                    <h3>Nav change</h3>
+                    <button type="button" onclick="changeNav('choice4', 'choice3')">Nav left</button>
+                    <button type="button" onclick="changeNav('choice3', 'choice4')">Nav right</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p><a href="../hw3.html">&larr; Go back to Homework 3 Main Page</a> | Header png image from <a href='https://pngtree.com/freepng/personal-computer-icon-for-your-project_4813078.html'>pngtree.com</a></p>
+        </footer>
+    </body>
+</html>

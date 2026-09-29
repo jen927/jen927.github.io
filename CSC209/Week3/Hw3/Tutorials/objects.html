@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>JS Objects</title>
+        <script src="../JS/Tutorials/objects.js"></script>
+    </head>
+    <body>
+        <h1>JS Objects</h1>
+        <p>Objects are variables that can store both values and functions.</p>
+        <p>Values are stored as key:value pairs called <b>properties</b>. You access this two ways: Object.property OR Object[property].</p>
+        <p>Functions are stored as key:function() pairs called <b>methods</b>. The keyword <i>this</i> is used to access the object that is calling a method. The keyword makes it possible to use the same method with different objects.</p>
+        <p>To <b>display</b> an object's, we can use a for loop or an Array.</p>
+
+        <h2>Example</h2>
+        <p>We'll create a simple <b>Student</b> object constructor. The Student will have a <i>firstName</i>, <i>lastName</i>, <i>age</i>, <i>major</i>, and <i>gradYr</i>. We created two students, studentA and studentB.</p>
+        <p id="studentA" onclick="studentName('studentA', studentA)">Click here to show studentA's name: </p>
+        <p id="studentB" onclick="studentName('studentB', studentB)">Click here to show studentB's name: </p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>JS Operators</title>
+        <script src="../JS/Tutorials/operators.js"></script>
+    </head>
+    <body>
+        <h1>JS Operators</h1>
+        <p>Operators are for Mathematical and Logical Computations.</p>
+        <h2>List of Arithmetic operators:</h2>
+        <ul>
+            <li><b>+</b>: Addition</li>
+            <li><b>-</b>: Subtraction</li>
+            <li><b>*</b>: Multiplication</li>
+            <li><b>/</b>: Division</li>
+            <li><b>**</b>: Exponentiation</li>
+            <li><b>%</b>: Modulus</li>
+            <li><b>++</b>: Increment</li>
+            <li><b>--</b>: Decrement</li>
+        </ul>
+        <h2>List of Assignment operators:</h2>
+        <ul>
+            <li>x<b> = </b>y: x = y</li>
+            <li>x<b> += </b>y: x = x + y</li>
+            <li>x<b> -= </b>y: x + x - y</li>
+            <li>x<b> *= </b>y: x = x * y</li>
+            <li>x<b> /= </b>y: x = x / y</li>
+            <li>x<b> %= </b>y: x = x % y</li>
+        </ul>
+        <h2>List of Comparison Operators:</h2>
+        <ul>
+            <li> x <b>==</b> y: true if x is equal to y</li>
+            <li> x <b>===</b> y: true if x is equal to y AND is the same type</li>
+            <li> x <b>!=</b> y: true if x is not equal to y</li>
+            <li> x <b>!==</b> y: true if x is not equal to y OR not equal type</li>
+            <li> x <b>></b> y: true if x is greater than y</li>
+            <li> x <b><</b> y: true if x is less than y</li>
+            <li> x <b>>=</b> y: true if x is greater than or equal to y</li>
+            <li> x <b><=</b> y: true if x is less than or equal to y</li>
+        </ul>
+        <h2>Logical Operators</h2>
+        <ul>
+            <li>a <b>&&</b> b: logical and</li>
+            <li>a <b>||</b> b: logical or</li>
+            <li><b>!</b>b: logical not</li>
+        </ul>
+        <h2>Logical Assignment Operators</h2>
+        <dl>
+            <dt>a <b>&&=</b> b</dt>
+            <dd><i>b</i> is assigned to <i>a</i> if and only if <i>a</i> is true.</dd>
+
+            <dt>a <b>||=</b> b</dt>
+            <dd><i>b</i> is assigned to <i>a</i> if and only if <i>a</i> is false.</dd>
+
+            <dt>a <b>??=</b> b</dt>
+            <dd><i>b</i> is assigned to <i>a</i> if and only if <i>a</i> is null/undefined.</dd>
+        </dl>
+
+        <h2>Example</h2>
+        <p>I've created a function using the logical and comparison operators to decide whether someone is of legal voting age:</p>
+        <p id = 'ex1' onclick="toHTML('ex1', null)">Click here to see output if your age is null: </p>
+        <p id = 'ex2' onclick="toHTML('ex2', 1000)">Click here to see output if your age is 1000: </p>
+        <p id = 'ex3' onclick="toHTML('ex3', -5)">Click here to see output if your age is -5: </p>
+        <p id = 'ex4' onclick="toHTML('ex4', 17)">Click here to see output if your age is 17: </p>
+        <p id = 'ex5' onclick="toHTML('ex5', 23)">Click here to see output if your age is 23: </p>
+
+
+    </body>
+
+</html>

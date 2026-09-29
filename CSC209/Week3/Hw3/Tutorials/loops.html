@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Loops</title>
+        <script src="../JS/Tutorials/loops.js"></script>
+    </head>
+    <body>
+        <h1>JS Loops</h1>
+        <p>When a variable is declared with <i>let</i> or <i>const</i> inside a loop, it will only be visible within the loop. <b>for</b> and <b>while</b> loops are similar to other programming languages.</p>
+        <p> for (let i = 0; i < 10; i++) { console.log(i); }</p>
+        <p>The above example will print 0 to 9 to console.</p>
+        <p> while (i < 5) { console.log(i); i++; }</p>
+        <p>The above example will print i to the console as long as i is less than 5.</p>
+
+        <h2>do while</h2>
+        <p>Similar to <b>while</b> loops, but it will execute the code block one time before checking the conditions are true.</p>
+        <p>do { something } while (condition)</p>
+
+        <h2>Example</h2>
+        <p>Using while loops, we'll create a function that solves for the greatest common divisor (gcd) between two positive integers.</p>
+        <p onclick="solveGCD('ex1', 146, 24)">Click here to see what the gcd(146,24) is: </p>
+        <p id="ex1"></p>
+        <p onclick="solveGCD('ex2', 1250, 25)">Click here to see what the gcd(1250,25) is: </p>
+        <p id="ex2"></p>
+    </body>
+</html>

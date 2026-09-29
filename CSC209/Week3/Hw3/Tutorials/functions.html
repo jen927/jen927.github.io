@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JS function</title>
+        <script src="../JS/Tutorials/function.js"></script>
+    </head>
+    <body>
+        <h1>JS functions</h1>
+        <p>In previous tutorials and examples, I've utilized functions, so I'll just rewrite one of my functions as Function Expression.</p>
+        <h2>Function Expression</h2>
+        <p>A Function Expression are functions stored in a variable.</p>
+        <h2>Examples</h2>
+        <p>const varName = function(a, b) { return a + b; };</p>
+        <p>const varName = function add(a,b) { return a + b; };</p>
+        <p>In the first example, the function isn't named, so to invoke it, we would use varName(a,b). While, they can be named, we still invoke using varName.</p>
+
+        <h2>More examples</h2>
+        <p>I'll rewrite the gcd function used in the loop tutorial and invoke it in the output to html function:</p>
+        <p onclick="displayGCD('ex1', 146, 24)">Click here to see what the gcd(146,24) is: </p>
+        <p id="ex1"></p>
+        <p onclick="displayGCD('ex2', 1250, 25)">Click here to see what the gcd(1250,25) is: </p>
+        <p id="ex2"></p>
+    </body>
+</html>

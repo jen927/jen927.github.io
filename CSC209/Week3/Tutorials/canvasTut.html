@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Points on Canvas</title>
+        <script>
+            class Points {
+                constructor(x , y) {
+                    this.x = x;
+                    this.y = y;
+                }
+
+                draw(ctx, number) {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI);
+                    ctx.fillText(number, this.x-3, this.y+3);
+                    ctx.stroke();
+                }
+
+
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Draw 3 Nice Points</h1>
+
+        <canvas id="pointsCanvas" width="600" height="500" style="border: 5px solid black;"></canvas>
+
+        <script>
+            const CANVAS = document.getElementById("pointsCanvas");
+            var ctx = CANVAS.getContext("2d");
+            ctx.font = "15px Georgia";
+            ctx.strokeStyle = "red";
+
+            ctx.beginPath();
+            ctx.arc(100, 75, 25, 0, 2 * Math.PI);
+            ctx.fillText("1", 97, 78);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(200, 75, 25, 0, 2 * Math.PI);
+            ctx.fillText("2", 197, 78);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(300, 75, 25, 0, 2 * Math.PI);
+            ctx.fillText("3", 297, 78);
+            ctx.stroke();
+
+            // Using class object
+
+            point1 = new Points(100, 175);
+            point1.draw(ctx, "4");
+
+            point2 = new Points(200, 175);
+            point2.draw(ctx, "5");
+
+            point3 = new Points(300, 175);
+            point3.draw(ctx, "6");
+        </script>
+    </body>
+</html>

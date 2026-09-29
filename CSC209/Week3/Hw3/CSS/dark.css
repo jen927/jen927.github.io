@@ -1,0 +1,82 @@
+.hw, #scheduleInfo {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.content {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: rgb(138, 142, 145);
+    width: 100%;
+    color: white;
+}
+
+.navBar {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: rgb(63, 71, 110);
+    }
+    li a {
+        display: block;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    /* Change the link and background color on hover */
+    li a:hover {
+        background-color: #555555;
+        color: white;
+    }
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(87, 59, 60);
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(108, 83, 45);
+    margin-top: 10px;
+    padding: 10px;
+    div {
+        padding-top: 10px;
+    }
+    a {
+        color: white;
+    }
+}
+
+body {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    margin: 10px 10px;
+}
+
+table {
+    td, th {
+        padding: 3px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+}
+
+#schedule-buttons {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+}
+
+#credits {
+    display: none;
+}
+
+#choice2, #choice4, #choice6 {
+    display: none;
+}
