@@ -1,0 +1,118 @@
+.flex-center {
+  display: flex;
+  height: 200px;
+  align-items: center;
+  background-color: DodgerBlue;
+}
+
+.flex-center div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-start {
+  display: flex;
+  height: 200px;
+  align-items: flex-start;
+  background-color: DodgerBlue;
+}
+
+.flex-start div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-end {
+  display: flex;
+  height: 200px;
+  align-items: flex-end;
+  background-color: DodgerBlue;
+}
+
+.flex-end div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-stretch {
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+  background-color: DodgerBlue;
+}
+
+.flex-stretch div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-content-center {
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-content-center div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-content-space-between {
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-content-space-between div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+
+.flex-true-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: DodgerBlue;
+}
+
+
+.flex-true-center div {
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 100px;  
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}

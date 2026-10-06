@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>JS array</title>
+    </head>
+    <body>
+        <h1>JS array</h1>
+        <p>The <b>new Array()</b> constructor creates an Array object. Ways to do this are:</p>
+        <ol>
+            <li>Array()</li>
+            <li>Array(number)</li>
+            <li>Array(element1, element2, ..., elementN)</li>
+        </ol>
+        <p>Number 1 creates an empty array. Number 2 creates an array with X number of empty spots. Number 3 creates an array with the list of elements given.</p>
+
+        <h2>Some Methods</h2>
+        <ul>
+            <li>array.length: returns size of array</li>
+            <li>array[index]: returns element at index</li>
+            <li>array.push(element): adds a new element to the end of the list</li>
+            <li>array.pop(): removes last element of list and returns the element</li>
+        </ul>
+
+        <p>I created an array of fruits: ["Banana", "Orange", "Apple", "Mango"].</p>
+        <p id="ex1">My output at fruits[2] is </p>
+        <p id="ex2">My output for fruits.length is </p>
+         <script>
+            fruits = new Array("Banana", "Orange", "Apple", "Mango");
+
+            document.getElementById('ex1').innerHTML += fruits[2];
+
+            document.getElementById('ex2').innerHTML += fruits.length;
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Points on Canvas</title>
+        <script>
+            const NRPTS = 15;
+            const NREDGES = Math.trunc(NRPTS / 2);
+        </script>
+    </head>
+    <body>
+        <h1>Draw Nice Points</h1>
+
+        <p id="ptCounter">Number of points: </p>
+        <p id="edgeCounter">Number of edges: </p>
+        
+        <div>
+            <h2>POINTS</h2>
+            <h3>Order and Label</h3>
+            <button id="ptsLabeled" onclick="isPointLabeled()">UNLABEL</button>
+            <button id="ptsOrder" onclick="changePointLabels()">RANDOM ORDER</button>
+            <h3>Point Layout</h3>
+            <button id="ptsPosition" onclick="scatterPoints()">SCATTER POINTS</button>
+        </div>
+        <div>
+            <h2>EDGES</h2>
+            <button id="edgesLabeled" onclick="isEdgeLabeled()">UNLABEL</button>
+            <button id="edges" onclick="hasEdges()">ADD EDGES</button>
+        </div>
+
+        <div>
+             <canvas id="pointsCanvas" width="600" height="500" style="border: 5px solid black;"></canvas>
+        </div>
+
+        <div>
+            <button type="button" id="coordButton" onclick="isCoordsVisible()">Show Coordinates and Pairs</button>
+            <p id="ptCoords"></p>
+            <p id="ptPairs"></p>
+        </div>
+        <script src="../JS/graphicConstant.js"></script>
+        <script src="../JS/helperFunctions.js"></script>
+        <script src="../JS/class.js"></script>
+        <script src="../JS/graphicFunction.js"></script>
+        <script>
+            const CANVAS = document.getElementById("pointsCanvas");
+            var ctx = CANVAS.getContext("2d");
+            
+            const POINTSARR = new Points(NRPTS);
+            const EDGESARR = new Edges(POINTSARR);
+            
+            let PTSLABEL = generateLabels(POINTSARR.length, POINTSARR.isRandomized);
+           
+            POINTSARR.generatePoints();
+            EDGESARR.addEdges();
+
+            POINTSARR.draw(ctx, PTSLABEL);
+
+        </script>
+        <script src="../JS/modifyingHTMLFunctions.js"></script>
+
+        <footer>
+            <a href="../hw4.html">&larr; Go back to HW4 Main Page</a>
+        </footer>
+
+    </body>
+</html>

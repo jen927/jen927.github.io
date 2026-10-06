@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <title>Points on Canvas</title>
+        <script>
+            const PTCOLOR = "red";
+            const TEXTFONT = "15px Georgia";
+            const EDGECOLOR = "black";
+            const RADIUS = 25;
+            const WIDTH = 500;
+            const HEIGHT = 400;
+
+            function generateRandomInt(max) { // creates a random coord
+                return Math.floor(Math.random() * max);
+            }
+
+            function findMidpoint(p1, p2) {
+                let x = (p1.x + p2.x) / 2;
+                let y = (p1.y + p2.y) / 2;
+                
+                return new Array(x, y);
+            }
+
+
+            class Point {
+                constructor(x , y) {
+                    this.x = x;
+                    this.y = y;
+                }
+
+                draw(ctx, number, flag) {
+                    ctx.strokeStyle = PTCOLOR;
+                    ctx.font = TEXTFONT;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, RADIUS, 0, 2 * Math.PI);
+                    if (flag){
+                        ctx.fillText(number, this.x-3, this.y+3);
+                    }
+                    ctx.stroke();
+                }
+            }
+
+            class Points extends Array {
+                
+                constructor(numPoints, isLabeled) { //constructor for points array
+                    super(numPoints); // length of array
+                    this.flag = isLabeled; // flag to decided whether to label pts
+                }
+
+                generatePoints() {
+
+                    // number of rows of points
+                    let numRows = this.length / 4;
+
+                    // max x-coord and max y-corrd
+                    let maxY = HEIGHT - 100;
+                    let maxX = WIDTH - 100;
+            
+                    // the change between x-coord and y-coords
+                    let yDifference = (maxY - 100)/numRows + RADIUS;
+                    let xDifference = (maxX -100)/4 + RADIUS;
+
+                    // console.log("max x = " + maxX);
+                    // console.log("dx = " + xDifference);
+
+                    // position of first point
+                    let yPostiton = 100;
+                    let xPosition = 100;
+
+                    // points array index
+                    let pointIndex = 0;
+
+                    // for each row
+                    for (let i = 0; i < numRows; i++){
+                        // create evenly placed 4 points in row
+                        for (let j = 0; j < 4; j++){
+                            // create point as long as there's space in array
+                            if (pointIndex < this.length) {
+                                this[pointIndex] = new Point(xPosition, yPostiton); // creates point
+                                xPosition += xDifference; // updates x position
+                                pointIndex += 1; // updates pts array index
+                                // console.log("Point " + j + ": (" + xPosition + ", " + yPostiton + ")");
+                            // when array is filled, break
+                            } else {
+                                break
+                            }
+                        }
+                        xPosition = 100; // reset x positon
+                        yPostiton += yDifference; // updates y position for new row
+                    }
+
+                }
+
+                generateRandomPoints() { // adds random points to array
+
+                    for (let i = 0; i < this.length; i++) {
+                        let x = generateRandomInt(WIDTH-100);
+                        let y = generateRandomInt(HEIGHT-100);
+                        this[i] = new Point(x,y);
+                    }
+
+                }
+
+                draw(ctx) { // draws points on canvas
+                    for (let i = 0; i < this.length; i++){
+                        this[i].draw(ctx, i+1, this.flag)
+                    }
+                }
+            }
+
+            class Edge {
+                constructor(pointA, pointB) {
+                    this.pA = pointA;
+                    this.pB = pointB;
+                }
+
+                draw(ctx, number, flag) {
+
+                    ctx.strokeStyle = EDGECOLOR;
+                    ctx.beginPath();
+                    ctx.moveTo(this.pA.x, this.pA.y);
+                    ctx.lineTo(this.pB.x, this.pB.y);
+                    ctx.closePath();
+                    
+                    if (flag){ // decides if edge should be labeled
+                        ctx.fillText(number, findMidpoint(this.pA, this.pB)[0], findMidpoint(this.pA, this.pB)[1]);
+                    }
+
+                    ctx.stroke();
+                }
+            }
+
+            class Edges extends Array {
+                constructor(points, isLabeled) {
+                    super(Math.trunc(points.length / 2));
+                    this.points = points;
+                    this.flag = isLabeled;
+                }
+
+                addEdges() {
+                    
+                    let j = 0; // index for points array
+
+                    for (let i = 0; i < this.length; i++) {
+                        this[i] = new Edge(this.points[j], this.points[j+1]);
+                        j += 2;
+                    }
+                }
+
+                draw(ctx) {
+                    for (let i = 0; i < this.length; i++) {
+                        this[i].draw(ctx, i+1, this.flag);
+                    }
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Draw Nice Points</h1>
+
+        <p id="ptCounter">Number of points: </p>
+        <p id="edgeCounter">Number of edges: </p>
+        
+        <div>
+            <h2>POINTS</h2>
+            <button id="ptsLabeled" onclick="isLabeled('ptsLabeled', 1)">UNLABEL</button>
+        </div>
+        <div>
+            <h2>EDGES</h2>
+            <button id="edgesLabeled" onclick="isLabeled('edgesLabeled', 2)">UNLABEL</button>
+        </div>
+
+        <canvas id="pointsCanvas" width="600" height="500" style="border: 5px solid black;"></canvas>
+
+        <script>
+            const CANVAS = document.getElementById("pointsCanvas");
+            var ctx = CANVAS.getContext("2d");
+            let pointsArr = new Points(NUMPTS, true);
+            let edgesArr = new Edges(pointsArr, true);
+
+            function isLabeled(id, type) {
+                
+                ctx.clearRect(0, 0, CANVAS.width, CANVAS.height);
+                
+                if (type === 1){
+                    if (pointsArr.flag) {
+                        pointsArr.flag = false;
+                        pointsArr.draw(ctx);
+                        edgesArr.draw(ctx);
+                        document.getElementById(id).innerHTML = "LABEL";
+                    } else {
+                        pointsArr.flag = true;
+                        pointsArr.draw(ctx);
+                        edgesArr.draw(ctx);
+                        document.getElementById(id).innerHTML = "UNLABEL";
+                    }
+                } else {
+                    if (edgesArr.flag) {
+                        edgesArr.flag = false;
+                        pointsArr.draw(ctx);
+                        edgesArr.draw(ctx);
+                        document.getElementById(id).innerHTML = "LABEL";
+                    } else {
+                        edgesArr.flag = true;
+                        pointsArr.draw(ctx);
+                        edgesArr.draw(ctx);
+                        document.getElementById(id).innerHTML = "UNLABEL";
+                    }
+                }
+            }
+
+           
+            // pointsArr.generateRandomPoints();
+            pointsArr.generatePoints();
+            console.log(pointsArr);
+            pointsArr.draw(ctx);
+
+            
+            edgesArr.addEdges();
+            edgesArr.draw(ctx);
+
+            const NUMEDGES = edgesArr.length;
+
+            document.getElementById('ptCounter').innerHTML += NUMPTS;
+            document.getElementById('edgeCounter').innerHTML += NUMEDGES;
+
+            // console.log(pointsArr);
+
+            // ctx.beginPath();
+            // ctx.arc(600/2, 500/2, 210, 0, 2 * Math.PI);
+            // ctx.stroke();
+
+        </script>
+    </body>
+</html>

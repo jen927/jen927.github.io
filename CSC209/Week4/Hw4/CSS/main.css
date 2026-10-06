@@ -1,0 +1,59 @@
+
+section {
+    padding: 10px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* width: 200px; */
+        background-color: rgb(145, 166, 255);
+        overflow: hidden;
+    }
+    li {
+        float: left;
+    }
+    li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+    /* Change the link and background color on hover */
+    li a:hover {
+        background-color: #555555;
+        color: white;
+    }
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(255, 81, 84);
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: rgb(255, 136, 220);
+    margin-top: 10px;
+    padding: 10px;
+    div {
+        padding-top: 10px;
+    }
+    a {
+        color: rgb(0, 0, 0);
+    }
+}
+
+body {
+    background-color: rgb(250, 255, 127);
+    margin: 10px 10px;
+}
+
+.sectionTitle {
+    text-align: center;
+}

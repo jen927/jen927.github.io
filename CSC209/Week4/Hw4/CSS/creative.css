@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(199, 179, 210);
+    margin: 30px;
+}
+
+canvas {
+    display: block;
+    margin: 10px;
+}
+
+header {
+    background-color: rgb(198, 195, 195);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.flex-horizontal {
+    margin: 0 225px;
+    display:flex;
+    justify-content: center;
+    
+    div {
+        padding: 10px;
+        background-color: rgb(223, 157, 157);
+       
+        h2 {
+            border-bottom: 3px solid black;
+            text-align: center;
+        }
+
+        p {
+            display: block;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 10px;
+            max-width: 600px;
+        }
+    }
+}
+
+.borders {
+    border: 4px dotted rgb(31, 31, 32);
+}
+
+#coordButton {
+    display: block;
+}
+
+#counters {
+    background-color: rgb(157, 176, 223);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+}

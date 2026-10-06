@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>JS Maps</title>
+    </head>
+
+    <body>
+        <h1>JS Maps</h1>
+        <p>A JavaScript Map is an object that can store collections of key-value pairs, similar to a dictionary in other programming languages.</p>
+
+        <h2>Map Characteristics</h2>
+        <ul>
+            <li>Key Types: Map keys can be any type (strings, numbers, objects, etc).</li>
+            <li>Insertion Order: The Map remembers the original insertion order of the keys.</li>
+            <li>Size: The number of items in a Map is easily retrieved using the size property.</li>
+            <li>Performance: Maps are optimized for frequent additions and removals of key-value pairs.</li>
+            <li>Iteration: Maps are iterable, allowing for direct use of for...of loops or methods like forEach().</li>
+            <li>Iteration Order: The original order is preserved during iteration.</li>
+        </ul>
+
+        <p>To create a map, use <b>new Map()</b> and we use <b>Map.set()</b> to add elements to map. You can also use it to change the value of key. <b>Map.get(k) returns the value at k key.</b></p>
+
+        <script>
+            // Create an empty Map
+            const fruits = new Map();
+
+            // Set Map Values
+            fruits.set("apples", 500);
+            fruits.set("bananas", 300);
+            fruits.set("oranges", 200);
+        </script>
+
+        <p>For example, I've created an empty map <b>fruits</b> and added the following elements:</p>
+        <ul>
+            <li>("apples", 500)</li>
+            <li>("bananas", 300)</li>
+            <li>("oranges", 200)</li>
+        </ul>
+
+        <p id="example">The output to fruits.get("apples") is: </p>
+
+        <script>document.getElementById('example').innerHTML += fruits.get("apples");</script>
+    </body>
+</html>
